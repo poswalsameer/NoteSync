@@ -4,7 +4,7 @@ export const notesContext = createContext({
 
     //this is the basic blueprint of how the structure will look like, all of the notes will be in the form of an array of objects, each object or notes having it's own Id, noteMsg, and completion status or not
 
-    notes: [
+    note: [
         
     ],
 
