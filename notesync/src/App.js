@@ -3,7 +3,7 @@ import './App.css';
 import AddNote from './components/AddNote';
 import Notes from './components/Notes';
 import { notesContext } from './contexts/AppContext';
-import { notesProvider } from './contexts/AppContext';
+import { NotesProvider } from './contexts/AppContext';
 import { useNotes } from './contexts/AppContext';
 
 function App() {
@@ -55,32 +55,32 @@ function App() {
   }, [note] )
 
   return (
-    <notesProvider value={{ note, addNote, deleteNote, editNote }} >
+    <NotesProvider value={{ note, addNote, deleteNote, editNote }} >
 
       <div className=' m-10 flex justify-center items-center text-8xl text-yellow-300' >
             NOTE SYNC
       </div>
 
-      //COMPONENT OF THE ADD NOTE INPUT FIELD
+      {/* COMPONENT OF THE ADD NOTE INPUT FIELD */}
       <div>
         <AddNote />
       </div>
 
-      //DIV WHERE WE WILL SHOW ALL THE NOTES USING MAP(LOOP)
+      {/* DIV WHERE WE WILL SHOW ALL THE NOTES USING MAP(LOOP) */}
       <div>
         
-        //note is from the context, note is the array of objects where all notes are stored
-        //this array is looped and new divs are created by using the idz in every note to display them on the browser
+        {/* note is from the context, note is the array of objects where all notes are stored
+        //this array is looped and new divs are created by using the idz in every note to display them on the browser */}
         {note.map( (eachNote) => (
           <div key={eachNote.id}>
-              <Notes />
+              <Notes note={note} />
           </div>
         ) )}
 
       </div>
 
       
-    </notesProvider>
+    </NotesProvider>
   );
 }
 
