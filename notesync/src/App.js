@@ -67,12 +67,12 @@ function App() {
       </div>
 
       {/* DIV WHERE WE WILL SHOW ALL THE NOTES USING MAP(LOOP) */}
-      <div>
+      <div className = 'grid grid-cols-3 justify-center content-center ' >
         
         {/* note is from the context, note is the array of objects where all notes are stored
         //this array is looped and new divs are created by using the idz in every note to display them on the browser */}
         {note.map( (eachNote) => (
-          <div key={eachNote.id}>
+          <div key={eachNote.id}  >
               <Notes note={note} />
           </div>
         ) )}

@@ -15,11 +15,53 @@ function Notes({ note }) {
 
   }
 
+  // const deletePresentNote = () => {
+
+  //   deleteNote(note.id);
+
+  // }
+
   return (
     
     <>
 
-        <div className='h-[30rem] w-[30rem] bg-slate-600 border-2 border-white ' ></div>
+        <div className=' my-14 mx-12 h-[24rem] w-[24rem] bg-slate-600 border-2 border-white rounded-lg flex flex-col justify-center items-center ' >
+
+          <input type="text" className={` outline-none h-[15rem] w-[15rem] bg-slate-600 text-white rounded-lg
+            ${ isEditable ? "border-2 border-white" : "border-transparent" }
+          `} 
+            onChange = {(e) => setnoteText(e.target.value)}
+            readOnly = {!isEditable}
+            value = {noteText}
+
+          />
+
+          <div className='flex flex-row justify-center items-center ' >
+
+          <button className=' w-16 m-4 bg-white text-black rounded-lg border-2 border-black '
+          onClick={ () => {
+            if(isEditable){
+              editNoteText();
+            }
+            else{
+              setIsEditable((prev) => !prev);
+            }
+          } }
+          >
+            {isEditable ? "SAVE" : "EDIT" }
+          </button>
+
+          <button className=' w-16 m-4 bg-white text-black rounded-lg border-2 border-black ' 
+          onClick={() => deleteNote(note.id)}
+          >
+            DELETE
+          </button>
+          </div>
+
+
+
+
+        </div>
     
     </>
   )
