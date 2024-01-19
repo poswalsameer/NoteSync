@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import './App.css';
 import AddNote from './components/AddNote';
 import Notes from './components/Notes';
@@ -10,18 +9,17 @@ function App() {
 
     <>
 
-      <div className=' m-10 flex justify-center items-center text-8xl text-yellow-300' >
-            NOTE SYNC
+      <div className=' m-16 flex justify-center items-center text-8xl
+        text-[#e8a87c]
+      font-extrabold ' >
+            NOTE <span className='text-[#41b3a3]'>-SYNC</span>
       </div>
 
-      <div>
+
         <AddNote />
-      </div>
-
-      <div>
+        
         <Notes/> 
-      </div>
-      
+          
     </>
     
   );

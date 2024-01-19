@@ -2,10 +2,10 @@ import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = {
     notes: [
-        {
-            id: 1,
-            noteText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quisquam minus ut voluptatum consectetur! Pente expedita repellat. Consectetur, eveniet."
-        }
+        // {
+        //     id: 1,
+        //     noteText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quisquam minus ut voluptatum consectetur! Pente expedita repellat. Consectetur, eveniet."
+        // }
     ]
 }
 
