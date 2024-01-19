@@ -1,70 +1,38 @@
-import React, { useState } from 'react'
-import { useNotes } from '../contexts/AppContext'
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import {deleteNote} from '../slices/noteSlice'
 
-function Notes({ note }) {
+function Notes() {
 
-  const [isEditable, setIsEditable] = useState(false);
-  const [ noteText, setnoteText ] = useState(note.noteMsg);
-
-  const { editNote, deleteNote } = useNotes();
-
-  const editNoteText = () => {
-
-    editNote(note.id, {...note, noteMsg: noteText})
-    setIsEditable(false);
-
-  }
-
-  // const deletePresentNote = () => {
-
-  //   deleteNote(note.id);
-
-  // }
+    const allNotes = useSelector( state => state.notes);
+    const dispatch = useDispatch();
 
   return (
-    
     <>
 
-        <div className=' my-14 mx-12 h-[24rem] w-[24rem] bg-slate-600 border-2 border-white rounded-lg flex flex-col justify-center items-center ' >
 
-          <input type="text" className={` outline-none h-[15rem] w-[15rem] bg-slate-600 text-white rounded-lg
-            ${ isEditable ? "border-2 border-white" : "border-transparent" }
-          `} 
-            onChange = {(e) => setnoteText(e.target.value)}
-            readOnly = {!isEditable}
-            value = {noteText}
+        <div className='grid grid-cols-3 justify-center items-center' >
 
-          />
+            {allNotes.map( (eachNote) => (
+                <div key={eachNote.id} className='h-[22rem] w-[22rem] bg-slate-600 text-white rounded-lg flex flex-col justify-center items-center m-10 ' >
+                    
+                    <div className='h-[16rem] w-[16rem] p-4 flex justify-center items-center text-center ' >
+                    {eachNote.noteText}
+                    </div>
 
-          <div className='flex flex-row justify-center items-center ' >
+                    <button className='rounded-lg h-10 w-20 bg-white text-black font-bold border-2 border-black my-4 '
+                    onClick={() => dispatch(deleteNote(eachNote.id))} 
+                    >DELETE</button>
 
-          <button className=' w-16 m-4 bg-white text-black rounded-lg border-2 border-black '
-          onClick={ () => {
-            if(isEditable){
-              editNoteText();
-            }
-            else{
-              setIsEditable((prev) => !prev);
-            }
-          } }
-          >
-            {isEditable ? "SAVE" : "EDIT" }
-          </button>
+                </div>
 
-          <button className=' w-16 m-4 bg-white text-black rounded-lg border-2 border-black ' 
-          onClick={() => deleteNote(note.id)}
-          >
-            DELETE
-          </button>
-          </div>
-
-
-
+            ) ) }
 
         </div>
-    
+      
     </>
   )
 }
 
 export default Notes
+

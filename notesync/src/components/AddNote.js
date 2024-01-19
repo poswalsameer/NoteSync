@@ -1,39 +1,35 @@
 import React, { useState } from 'react'
-import { useNotes } from '../contexts/AppContext';
+import { useDispatch } from 'react-redux';
+import {addNote} from '../slices/noteSlice';
+
 
 function AddNote() {
 
-    const [notes, setNotes] = useState("");
-    const {addNote} = useNotes();
+    const [text, setText] = useState('');
 
-    //THIS FUNCTION DOES THE WORK OF ADDING NEW NOTE IN THE UI
-    const add = () => {
-        
-        if( !notes ){
-            return;
-        }
+    const dispatch = useDispatch();
 
-        addNote( {newNote: notes} );
-
-        //AFTER ADDING CLEAR THE INPUT FIELD
-        setNotes("");
+    const addTextToNote = () => {
+        dispatch(addNote(text));
+        console.log(text);
+        setText('');
     }
 
-
-    return (
+  return (
     <>
+    
+    <div className='flex flex-row justify-center items-center' >
 
-        <div className='flex flex-row justify-center items-center' >
+        <textarea name="" id="" cols="30" rows="10" className='h-20 w-[40rem] rounded-lg border-4 border-blue-700 text-black font-bold p-4 resize-none ' value={text} onChange={ (e) => setText(e.target.value) } ></textarea>
 
-            <input type="text" className=' h-20 w-[40rem] rounded-lg border-4 border-blue-700 text-black font-bold p-4 ' value={notes} onChange = {(e) => setNotes(e.target.value)} />
-
-            <button className=' h-20 w-40 mx-6 bg-blue-700 text-black font-bold rounded-lg ' onClick={add} >Add Note</button>
+        <button className=' h-20 w-40 mx-6 bg-blue-700 text-black font-bold rounded-lg ' onClick={addTextToNote} >Add Note</button>
 
 
-        </div>
+    </div>
     
     </>
   )
 }
 
 export default AddNote
+
