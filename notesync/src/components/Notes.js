@@ -11,7 +11,7 @@ function Notes() {
     <>
 
 
-        <div className='grid grid-cols-2 justify-items-center items-center
+        <div id='notesDiv' className='grid grid-cols-2 justify-items-center items-center
         
         sm:grid sm:grid-cols-3 sm:justify-items-center sm:items-center
         

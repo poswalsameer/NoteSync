@@ -53,16 +53,16 @@ function AddNote() {
         
         xl:h-20 xl:w-[40rem] xl:bg-[#e8a87c] xl:rounded-lg xl:border-4 xl:border-[#644531] xl:text-black xl:font-bold xl:p-4 xl:resize-none xl:focus:outline-none ' value={text} onChange={ (e) => setText(e.target.value) } ></textarea>
 
-        <button className='h-16 w-32 my-6 mx-6 bg-[#41b3a3] text-xl text-[#644531] border-4 border-[#644531] font-bold rounded-lg
+        <button className='h-16 w-32 my-6 mx-6 bg-[#41b3a3] text-xl text-[#644531] border-4 border-[#644531] font-bold rounded-lg hover:bg-[#644531] hover:text-[#41b3a3] hover:border-4 hover:border-[#41b3a3]
         
         
-        sm:h-20 sm:w-40 sm:mx-6 sm:bg-[#41b3a3] sm:text-xl sm:text-[#644531] sm:border-4 sm:border-[#644531] sm:font-bold sm:rounded-lg
+        sm:h-20 sm:w-40 sm:mx-6 sm:bg-[#41b3a3] sm:text-xl sm:text-[#644531] sm:border-4 sm:border-[#644531] sm:font-bold sm:rounded-lg sm:hover:bg-[#644531] sm:hover:text-[#41b3a3] sm:hover:border-4 sm:hover:border-[#41b3a3]
         
-        md:h-20 md:w-40 md:mx-6 md:bg-[#41b3a3] md:text-xl md:text-[#644531] md:border-4 md:border-[#644531] md:font-bold md:rounded-lg
+        md:h-20 md:w-40 md:mx-6 md:bg-[#41b3a3] md:text-xl md:text-[#644531] md:border-4 md:border-[#644531] md:font-bold md:rounded-lg md:hover:bg-[#644531] md:hover:text-[#41b3a3] md:hover:border-4 md:hover:border-[#41b3a3]
         
-        lg:h-20 lg:w-40 lg:mx-6 lg:bg-[#41b3a3] lg:text-xl lg:text-[#644531] lg:border-4 lg:border-[#644531] lg:font-bold lg:rounded-lg
+        lg:h-20 lg:w-40 lg:mx-6 lg:bg-[#41b3a3] lg:text-xl lg:text-[#644531] lg:border-4 lg:border-[#644531] lg:font-bold lg:rounded-lg lg:hover:bg-[#644531] lg:hover:text-[#41b3a3] lg:hover:border-4 lg:hover:border-[#41b3a3]
         
-        xl:h-20 xl:w-40 xl:mx-6 xl:bg-[#41b3a3] xl:text-xl xl:text-[#644531] xl:border-4 xl:border-[#644531] xl:font-bold xl:rounded-lg ' onClick={addTextToNote} >Add Note</button>
+        xl:h-20 xl:w-40 xl:mx-6 xl:bg-[#41b3a3] xl:text-xl xl:text-[#644531] xl:border-4 xl:border-[#644531] xl:font-bold xl:rounded-lg xl:hover:bg-[#644531] xl:hover:text-[#41b3a3] xl:hover:border-4 xl:hover:border-[#41b3a3]  ' onClick={addTextToNote} >Add Note</button>
 
 
     </div>
