@@ -14,7 +14,11 @@ function AddNote() {
     const dispatch = useDispatch();
 
     const addTextToNote = () => {
-        dispatch(addNote(text));
+
+        if(text.length > 0){
+          dispatch(addNote(text));
+        }
+        
 
         const existingNotes = JSON.parse(localStorage.getItem('notes')) || [];
         const newNotes = [...existingNotes, { id: nanoid(), noteText: text }];
