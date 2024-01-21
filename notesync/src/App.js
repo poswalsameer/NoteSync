@@ -44,13 +44,21 @@ function App() {
 
   return (
     <Provider store={store}>
-      <div className='md:m-16 md:flex md:justify-center md:items-center md:text-8xl md:text-[#e8a87c] md:font-extrabold
+      <div className='m-16 flex justify-center items-center text-4xl text-[#e8a87c] font-extrabold
+      
+      sm:m-16 sm:flex sm:justify-center sm:items-center sm:text-7xl sm:text-[#e8a87c] sm:font-extrabold
+      
+      md:m-16 md:flex md:justify-center md:items-center md:text-8xl md:text-[#e8a87c] md:font-extrabold
       
       lg:m-16 lg:flex lg:justify-center lg:items-center lg:text-8xl lg:text-[#e8a87c] lg:font-extrabold
 
-      xl:m-16 xl:flex xl:justify-center xl:items-center xl:text-8xl xl:text-[#e8a87c] xl:font-extrabold'>
+      xl:m-16 xl:flex xl:justify-center xl:items-center xl:text-8xl xl:text-[#e8a87c] xl:font-extrabold
+      
+      2xl:m-16 2xl:flex 2xl:justify-center 2xl:items-center 2xl:text-9xl 2xl:text-[#e8a87c] 2xl:font-extrabold
+      '>
 
-        NOTE <span className='md:text-[#41b3a3]
+        NOTE <span className='text-[#41b3a3] sm:text-[#41b3a3]
+        md:text-[#41b3a3]
         lg:text-[#41b3a3]
         xl:text-[#41b3a3]'>-SYNC</span>
       </div>
