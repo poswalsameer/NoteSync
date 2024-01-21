@@ -37,7 +37,7 @@ function Notes() {
                 
                 xl:h-[22rem] xl:w-[22rem] xl:bg-[#644531] xl:font-bold xl:text-xl xl:text-[#e8a87c] xl:border-4 xl:border-[#e8a87c] xl:rounded-lg xl:flex xl:flex-col xl:text-ellipsis xl:overflow-hidden xl:justify-center xl:items-center xl:m-10 xl:focus:outline-none xl:focus:border-2 xl:focus:border-[#e8a87c] 
                 
-                2xl:h-[22rem] 2xl:w-[22rem] 2xl:bg-[#644531] 2xl:font-bold 2xl:text-xl 2xl:text-[#e8a87c] 2xl:border-4 2xl:border-[#e8a87c] 2xl:rounded-lg 2xl:flex 2xl:flex-col 2xl:text-ellipsis 2xl:overflow-hidden 2xl:justify-center 2xl:items-center 2xl:m-10 2xl:focus:outline-none 2xl:focus:border-2 2xl:focus:border-[#e8a87c]
+                2xl:h-[20rem] 2xl:w-[20rem] 2xl:bg-[#644531] 2xl:font-bold 2xl:text-xl 2xl:text-[#e8a87c] 2xl:border-4 2xl:border-[#e8a87c] 2xl:rounded-lg 2xl:flex 2xl:flex-col 2xl:text-ellipsis 2xl:overflow-hidden 2xl:justify-center 2xl:items-center 2xl:m-10 2xl:focus:outline-none 2xl:focus:border-2 2xl:focus:border-[#e8a87c]
                 ' >
                     
                     <textarea className='h-[5rem] w-[7rem] p-4 flex justify-center items-center text-center bg-[#644531] resize-none focus:outline-none focus:border-2 focus:border-[#e8a87c] rounded-lg
@@ -50,7 +50,10 @@ function Notes() {
                     lg:h-[12rem] lg:w-[14rem] lg:p-4 lg:flex lg:justify-center lg:items-center lg:text-center lg:bg-[#644531] lg:resize-none lg:focus:outline-none lg:focus:border-2 lg:focus:border-[#e8a87c] lg:rounded-lg
                     
                     
-                    xl:h-[16rem] xl:w-[18rem] xl:p-4 xl:flex xl:justify-center xl:items-center xl:text-center xl:bg-[#644531] xl:resize-none xl:focus:outline-none xl:focus:border-2 xl:focus:border-[#e8a87c] xl:rounded-lg ' >
+                    xl:h-[16rem] xl:w-[18rem] xl:p-4 xl:flex xl:justify-center xl:items-center xl:text-center xl:bg-[#644531] xl:resize-none xl:focus:outline-none xl:focus:border-2 xl:focus:border-[#e8a87c] xl:rounded-lg
+                    
+                    2xl:h-[14rem] 2xl:w-[16rem] 2xl:p-4 2xl:flex 2xl:justify-center 2xl:items-center 2xl:text-center 2xl:bg-[#644531] 2xl:resize-none 2xl:focus:outline-none 2xl:focus:border-2 2xl:focus:border-[#e8a87c] 2xl:rounded-lg
+                    ' >
                     {eachNote.noteText}
                     </textarea>
 
