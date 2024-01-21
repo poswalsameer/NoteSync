@@ -6,19 +6,25 @@
     height: 100%;
     margin: 0;
 } */
+/* 
+html{
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
 
 body{
     /* background-color: black; */
     color: white;
 
     /* background-color: #524a46; */
-    background: linear-gradient(#321A6E 0 30%, #e8a87c );
+    background: linear-gradient(#452a88 0 30%, #e8a87c );
+    background-attachment: fixed;
+    
+    
 
     /* background-image: url('../public/bg2.jpg');
     background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%; */
-    /* display: flex;
+    
     flex-direction: column;
     min-height: 100vh; */
     
